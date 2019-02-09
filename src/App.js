@@ -1,25 +1,18 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Component} from 'react';
+
 import './App.css';
+import SlideShow from './SlideShow';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <SlideShow>
+          <img src="http://placekitten.com/300/200" alt="catimg"/>
+          <img src="http://placekitten.com/300/201" alt="catimg"/>
+          <img src="http://placekitten.com/300/202" alt="catimg"/>
+        </SlideShow>
       </div>
     );
   }
