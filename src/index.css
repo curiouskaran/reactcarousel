@@ -7,7 +7,37 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.slideshow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slideshow img {
+  width: fit-content;
+}
+.slideshow .bullets {
+  display: flex;
+  background: #7788998c;
+  padding: 2px 4px;
+  border-radius: 5px;
+  margin: 5px;
+  justify-content: space-around;
+}
 
+.slideshow .bullets .bullet-empty {
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0px 2px;
+}
+.slideshow .bullets .bullet-filled {
+  width: 10px;
+  height: 5px;
+  background: #fff;
+  border-radius: 80%;
+  margin: 0px 2px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

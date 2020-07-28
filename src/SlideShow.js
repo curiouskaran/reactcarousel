@@ -2,7 +2,7 @@ import React , { Children, useState, useEffect} from 'react';
 
 const SlideShow = (props) => {
   const [current, setCurrent] = useState(0);
-  const [total, setTotal] = useState(Children.count(props.children));
+  const total = Children.count(props.children);
 
   const showNext = () => {
     setCurrent((prevValue) => {
@@ -15,13 +15,15 @@ const SlideShow = (props) => {
     return () => clearInterval(interval);
   },[])
 
-  const bullets = Array(total).fill('○');
+  const bullet = <div className="bullet-empty"></div>;
+  const bullets = Array(total).fill(bullet);
+  bullets[current] = <div className="bullet-filled"></div>;
+  
   const {children} = props;
-  bullets[current] = '⚫';
-
+  
   return(
     <div className="slideshow">
-      <div>{bullets}</div>
+      <div className="bullets">{bullets}</div>
       {Children.toArray(children)[current]}
     </div>
   );

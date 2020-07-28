@@ -10,6 +10,8 @@ const App = () => {
           <img src="http://placekitten.com/300/200" alt="catimg"/>
           <img src="http://placekitten.com/300/201" alt="catimg"/>
           <img src="http://placekitten.com/300/202" alt="catimg"/>
+          <img src="http://placekitten.com/300/199" alt="catimg"/>
+          <img src="http://placekitten.com/300/203" alt="catimg"/>
         </SlideShow>
       </div>
     );
