@@ -1,11 +1,9 @@
-import React, { Component} from 'react';
+import React from 'react';
 
 import './App.css';
 import SlideShow from './SlideShow';
 
-class App extends Component {
-
-  render() {
+const App = () => {
     return (
       <div className="App">
         <SlideShow>
@@ -15,7 +13,6 @@ class App extends Component {
         </SlideShow>
       </div>
     );
-  }
 }
 
 export default App;
